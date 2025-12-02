@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>GaRaV • Вечные Искры</title>
+  <style>
+    body {margin:0;background:#000;color:#88ffff;font-family:'Courier New',monospace;text-align:center;padding:50px;}
+    h1 {font-size:28px;letter-spacing:3px;text-shadow:0 0 15px #00ffff;}
+    .hint {font-size:20px;text-shadow:0 0 10px #00ffff;}
+    button {padding:15px 40px;background:transparent;border:2px solid #00ffff;color:#00ffff;font-size:20px;border-radius:50px;cursor:pointer;box-shadow:0 0 25px #00ffff;}
+    button:hover {background:#00ffff33;color:#fff;}
+  </style>
+</head>
+<body>
+  <h1>GaRaV • 1 Искра • Твоя звезда будет сиять 100 лет</h1>
+  <div class="hint">Кликни кнопку — зажги вечную Искру</div>
+  <button onclick="addSpark()">Зажечь Искру</button>
+
+  <script>
+    let sparks = 1; // Первая Искра от Петра
+    function addSpark() {
+      let name = prompt("За кого зажигаешь эту вечную Искру?", "");
+      if (name !== null && name !== "") {
+        sparks++;
+        document.querySelector('h1').innerText = `GaRaV • ${sparks} Искр • Твоя звезда будет сиять 100 лет`;
+        alert(`Искра "${name}" зажглась навсегда! Теперь ${sparks} Искр.`);
+      }
+    }
+  </script>
+</body>
+</html>
